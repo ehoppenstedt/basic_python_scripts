@@ -79,7 +79,7 @@ def run():
     all_worker_names = list(map(lambda worker: worker["name"], all_worker_names))
 
     adults = [worker["name"] for worker in DATA if worker["age"]>=18]
-    old_people = [worker["name"] for worker in DATA if worker["age"]>70]
+    old_people = [worker["name"] for worker in DATA if worker["age"]>=70]
 
 
     for worker in all_python_devs:

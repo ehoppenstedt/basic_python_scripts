@@ -29,7 +29,7 @@ DATA = [
     },
     {
         'name': 'Isabella',
-        'age': 30,
+        'age': 70,
         'organization': 'Platzi',
         'position': 'QA Manager',
         'language': 'java',
@@ -76,7 +76,7 @@ def run():
     all_worker_names = [worker["name"] for worker in DATA if worker["organization"]=="Platzi"]
     adults = list(filter(lambda worker: worker ["age"]>=18, DATA))
     adults = list(map(lambda worker: worker["name"], adults))
-    old_people = list(map(lambda worker: worker | {"old": worker["age"]>70}, DATA))
+    old_people = [worker["name"] for worker in DATA if worker["age"]>=70]
 
     for worker in all_python_devs:
         print(worker, " programa en Python")
